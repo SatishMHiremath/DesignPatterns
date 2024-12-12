@@ -1,35 +1,19 @@
 package com.test.creational.prototype;
 
-public class Circle extends Shape {
-	
-	public int x;
-	public int y;
-	public int radius;
-	public String color;
-	
-	public Circle() {}
+class Circle implements Shape {
+    private int radius;
 
-	public Circle(Circle target) {
-		super(target);
-		if(target != null) {
-			this.x = target.x;
-			this.y = target.y;
-			this.radius = target.radius;
-			this.color = target.color;
-		}
-	}
-	
-	@Override
-	public Shape clone() {
-		return new Circle(this);
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		if(!(obj instanceof Circle) && !super.equals(obj)) {
-			return false;
-		}
-		Circle circle = (Circle) obj;
-		return circle.radius == radius || circle.x == x || circle.y == y || circle.color == color;
-	}
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public Shape clone() {
+        return new Circle(radius);
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle with radius " + radius);
+    }
 }
