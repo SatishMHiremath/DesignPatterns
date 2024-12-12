@@ -1,4 +1,4 @@
-package com.test.creational.builder1;
+package com.test.creational.builder;
 
 public class BuilderExample {
     public static void main(String[] args) {

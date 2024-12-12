@@ -1,4 +1,4 @@
-package com.test.creational.builder1;
+package com.test.creational.builder;
 
 class Computer {
     private String cpu;
