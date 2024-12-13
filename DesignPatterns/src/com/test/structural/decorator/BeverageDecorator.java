@@ -1,16 +1,21 @@
 package com.test.structural.decorator;
 
-public abstract class BeverageDecorator {
+public abstract class BeverageDecorator implements Beverage {
 
-	private Beverage beverage;
-	double cost;
-	String description;
+	protected Beverage beverage;
+	
 	public BeverageDecorator(Beverage beverage) {
 		this.beverage = beverage;
 	}
 	
-	public abstract double getCost();
-
-	public abstract String getDescription();
+	@Override
+	public double getCost() {
+		return beverage.getCost();
+	}
+	
+	@Override
+	public String getDescription() {
+		return beverage.getDescription();
+	}
 	
 }

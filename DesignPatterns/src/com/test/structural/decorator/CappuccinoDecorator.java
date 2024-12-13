@@ -8,12 +8,12 @@ public class CappuccinoDecorator extends BeverageDecorator {
 	
 	@Override
 	public double getCost() {
-		return super.cost;
+		return super.getCost()+0.50;
 	}
 	
 	@Override 
 	public String getDescription() {
-		return super.description+ "Cappuccino";
+		return super.getDescription()+ "and cost of Cappuccino is";
 				
 	}
 }

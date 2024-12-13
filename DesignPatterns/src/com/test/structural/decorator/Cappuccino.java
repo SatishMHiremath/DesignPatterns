@@ -9,7 +9,7 @@ public class Cappuccino implements Beverage {
 
 	@Override
 	public String getDescription() {
-		return "Cappuccino is my favourite coffee every day";
+		return "Cappuccino is my favourite coffee every day ";
 	}
 	
 }
